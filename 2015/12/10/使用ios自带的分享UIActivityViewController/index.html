@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>使用ios自带的分享UIActivityViewController | TheBloodElf Is Good</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="先看下效果吧，其中微信和微信朋友圈是自己定制的，然后其他的是系统默认的（系统会根据分享内容情况来选择性的弹出社交平台）。其实为什么我们要定制呢？我们发现微博那些系统都是能够自动的弹出来的，但是唯独微信不可以，我就百度了下，发现苹果的应用imessage和微信功能差不多，所以都懂的瑟（小规模市场）！那么我们就开始定制吧：一：倒入weixinsdk，然后加上一些必须要的库：最好都加上，我自己琢磨出来的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用ios自带的分享UIActivityViewController">
+<meta property="og:url" content="http://yoursite.com/2015/12/10/使用ios自带的分享UIActivityViewController/index.html">
+<meta property="og:site_name" content="TheBloodElf Is Good">
+<meta property="og:description" content="先看下效果吧，其中微信和微信朋友圈是自己定制的，然后其他的是系统默认的（系统会根据分享内容情况来选择性的弹出社交平台）。其实为什么我们要定制呢？我们发现微博那些系统都是能够自动的弹出来的，但是唯独微信不可以，我就百度了下，发现苹果的应用imessage和微信功能差不多，所以都懂的瑟（小规模市场）！那么我们就开始定制吧：一：倒入weixinsdk，然后加上一些必须要的库：最好都加上，我自己琢磨出来的">
+<meta property="og:image" content="http://yoursite.com/images/3.png">
+<meta property="og:image" content="http://yoursite.com/images/4.png">
+<meta property="og:image" content="http://yoursite.com/images/5.png">
+<meta property="og:image" content="http://yoursite.com/images/6.png">
+<meta property="og:image" content="http://yoursite.com/images/7.png">
+<meta property="og:image" content="http://yoursite.com/images/8.png">
+<meta property="og:image" content="http://yoursite.com/images/9.png">
+<meta property="og:image" content="http://yoursite.com//images/10.png">
+<meta property="og:image" content="http://yoursite.com//images/11.png">
+<meta property="og:updated_time" content="2015-12-10T12:17:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用ios自带的分享UIActivityViewController">
+<meta name="twitter:description" content="先看下效果吧，其中微信和微信朋友圈是自己定制的，然后其他的是系统默认的（系统会根据分享内容情况来选择性的弹出社交平台）。其实为什么我们要定制呢？我们发现微博那些系统都是能够自动的弹出来的，但是唯独微信不可以，我就百度了下，发现苹果的应用imessage和微信功能差不多，所以都懂的瑟（小规模市场）！那么我们就开始定制吧：一：倒入weixinsdk，然后加上一些必须要的库：最好都加上，我自己琢磨出来的">
+  
+    <link rel="alternative" href="/atom.xml" title="TheBloodElf Is Good" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">TheBloodElf Is Good</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Record Your Life</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-使用ios自带的分享UIActivityViewController" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/10/使用ios自带的分享UIActivityViewController/" class="article-date">
+  <time datetime="2015-12-10T11:44:20.000Z" itemprop="datePublished">2015-12-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用ios自带的分享UIActivityViewController
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>先看下效果吧，<br><img src="/images/3.png" alt="3.png">其中微信和微信朋友圈是自己定制的，然后其他的是系统默认的（系统会根据分享内容情况来选择性的弹出社交平台）。其实为什么我们要定制呢？<br>我们发现微博那些系统都是能够自动的弹出来的，但是唯独微信不可以，我就百度了下，发现苹果的应用imessage和微信功能差不多，所以都懂的瑟（小规模市场）！那么我们就开始定制吧：<br>一：倒入weixinsdk，然后加上一些必须要的库：<br><img src="/images/4.png" alt="4.png"><br>最好都加上，我自己琢磨出来的，<br>二：加上白名单：<br><img src="/images/5.png" alt="5.png"><br>三：加上url scheme和网络请求：<br><img src="/images/6.png" alt="6.png"><br><img src="/images/7.png" alt="7.png"><br>四：头文件和pch文件还是必须要的：<br><img src="/images/8.png" alt="8.png"><br><img src="/images/9.png" alt="9.png"><br><img src="//images/10.png" alt="10.png"><br>五：现在可以开始敲代码了，<br><img src="//images/11.png" alt="11.png"><br>我们来看看a处，是一个需要分享的对象，b就是初始化分享视图了（系统的），第一个参数是一个数组，所以我写了一个方法把属性封装成数组（[model itemsArr]），第二个参数是一个数组，如果为空则系统默认弹出平台，如果不为空，就是在默认基础上加上数组的内容了！<br>六：我们来看看具体的+ (NSArray*)activityArr<br>{<br>    return @[[WeixinSessionActivity new]；<br>    [WeixinTimelineActivity new]];<br>}这个就是那两个自定义项了，这两个是继承WeixinActivity，WeixinActivity继承UIActivity，你也可以直接继承UIActivity，但是面向对象嘛！然后我们重写的方法就是写出来的那几个，注释我都写好了的，你们一定能看懂。<br>七：遇到的问题，好的，那么现在我来说下纠结的问题吧：如果你自己有苹果手机，你可以看看系统图片的分享，里面的微信还有一个小的视图控制器，那么那个是什么东西呢？好吧，那个属于share扩展，也就是说那个是微信自己做好的，我们也可以做一个然后就可以在分享中看到自己的应用了！那么我们在自己的应用中可以简单的集成吗？答案是否定的，苹果没有把他加入sdk，我们只能自己做，也就是不进入微信就完成微信的分享功能，这个就有点复杂了，界面自己搭，请求自己去官网找！我的demo没有做这个，我就使用了进入微信完成分享的简便途径。<br>八：老规矩，代码奉上：<a href="https://git.oschina.net/liyongshi.com/ShareViewController.git" target="_blank" rel="external">https://git.oschina.net/liyongshi.com/ShareViewController.git</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/10/使用ios自带的分享UIActivityViewController/" data-id="cii07mumf0006rtxnmji2ivzs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Xcode7真机/虚拟机运行手机屏幕上下黑边问题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">10</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/12/10/使用ios自带的分享UIActivityViewController/">使用ios自带的分享UIActivityViewController</a>
+          </li>
+        
+          <li>
+            <a href="/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/">Xcode7真机/虚拟机运行手机屏幕上下黑边问题</a>
+          </li>
+        
+          <li>
+            <a href="/2015/12/09/第三天踩点（最后一篇）/">第三天踩点（最后一篇）</a>
+          </li>
+        
+          <li>
+            <a href="/2015/12/08/自己做微信图片浏览demo/">自己做微信图片浏览demo</a>
+          </li>
+        
+          <li>
+            <a href="/2015/12/08/今天晚上真是天真/">今天晚上真是天真</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 TheBloodElf<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

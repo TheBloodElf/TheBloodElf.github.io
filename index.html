@@ -65,6 +65,80 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-使用ios自带的分享UIActivityViewController" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/10/使用ios自带的分享UIActivityViewController/" class="article-date">
+  <time datetime="2015-12-10T11:44:20.000Z" itemprop="datePublished">2015-12-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/10/使用ios自带的分享UIActivityViewController/">使用ios自带的分享UIActivityViewController</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>先看下效果吧，<br><img src="/images/3.png" alt="3.png">其中微信和微信朋友圈是自己定制的，然后其他的是系统默认的（系统会根据分享内容情况来选择性的弹出社交平台）。其实为什么我们要定制呢？<br>我们发现微博那些系统都是能够自动的弹出来的，但是唯独微信不可以，我就百度了下，发现苹果的应用imessage和微信功能差不多，所以都懂的瑟（小规模市场）！那么我们就开始定制吧：<br>一：倒入weixinsdk，然后加上一些必须要的库：<br><img src="/images/4.png" alt="4.png"><br>最好都加上，我自己琢磨出来的，<br>二：加上白名单：<br><img src="/images/5.png" alt="5.png"><br>三：加上url scheme和网络请求：<br><img src="/images/6.png" alt="6.png"><br><img src="/images/7.png" alt="7.png"><br>四：头文件和pch文件还是必须要的：<br><img src="/images/8.png" alt="8.png"><br><img src="/images/9.png" alt="9.png"><br><img src="//images/10.png" alt="10.png"><br>五：现在可以开始敲代码了，<br><img src="//images/11.png" alt="11.png"><br>我们来看看a处，是一个需要分享的对象，b就是初始化分享视图了（系统的），第一个参数是一个数组，所以我写了一个方法把属性封装成数组（[model itemsArr]），第二个参数是一个数组，如果为空则系统默认弹出平台，如果不为空，就是在默认基础上加上数组的内容了！<br>六：我们来看看具体的+ (NSArray*)activityArr<br>{<br>    return @[[WeixinSessionActivity new]；<br>    [WeixinTimelineActivity new]];<br>}这个就是那两个自定义项了，这两个是继承WeixinActivity，WeixinActivity继承UIActivity，你也可以直接继承UIActivity，但是面向对象嘛！然后我们重写的方法就是写出来的那几个，注释我都写好了的，你们一定能看懂。<br>七：遇到的问题，好的，那么现在我来说下纠结的问题吧：如果你自己有苹果手机，你可以看看系统图片的分享，里面的微信还有一个小的视图控制器，那么那个是什么东西呢？好吧，那个属于share扩展，也就是说那个是微信自己做好的，我们也可以做一个然后就可以在分享中看到自己的应用了！那么我们在自己的应用中可以简单的集成吗？答案是否定的，苹果没有把他加入sdk，我们只能自己做，也就是不进入微信就完成微信的分享功能，这个就有点复杂了，界面自己搭，请求自己去官网找！我的demo没有做这个，我就使用了进入微信完成分享的简便途径。<br>八：老规矩，代码奉上：<a href="https://git.oschina.net/liyongshi.com/ShareViewController.git" target="_blank" rel="external">https://git.oschina.net/liyongshi.com/ShareViewController.git</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/10/使用ios自带的分享UIActivityViewController/" data-id="cii07mumf0006rtxnmji2ivzs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Xcode7真机-虚拟机运行手机屏幕上下黑边问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/" class="article-date">
+  <time datetime="2015-12-10T11:34:21.000Z" itemprop="datePublished">2015-12-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/">Xcode7真机/虚拟机运行手机屏幕上下黑边问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近使用一些demo的时候，发现有的运行起来上下有黑边！最开始我以为这是Xcode某个地方设置的问题，就没有去管它！但是到后面我真正想弄得没有黑边的时候，我才发现到处都是正常的啊～那么问题在哪里呢？<br>于是我在网上找了下解决办法，<a href="http://blog.csdn.net/android_ls/article/details/39234963" target="_blank" rel="external">http://blog.csdn.net/android_ls/article/details/39234963</a><br>我发现这真是太神奇了！在LaunchImage中加上对应的图片就解决了！！<br>于是乎我就这么解决了这个问题！！！特别记录下！！！！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/" data-id="cii07mulo0000rtxnvsj0mlwg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-第三天踩点（最后一篇）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/12/09/第三天踩点（最后一篇）/" class="article-date">
@@ -92,7 +166,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/09/第三天踩点（最后一篇）/" data-id="cihy5rbe20002wj71ep4qav69" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/09/第三天踩点（最后一篇）/" data-id="cii07mum60002rtxnkjywcmb4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -133,7 +207,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/自己做微信图片浏览demo/" data-id="cihy5rbe00001wj71mncs34kz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/自己做微信图片浏览demo/" data-id="cii07mum40001rtxn6v9x80s5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -170,7 +244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/今天晚上真是天真/" data-id="cihy5rbea0006wj71p95pg36w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/今天晚上真是天真/" data-id="cii07mumh0007rtxn192r4t78" class="article-share-link">Share</a>
       
       
     </footer>
@@ -207,7 +281,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/新住处第二天踩点总结/" data-id="cihy5rbe40003wj71wmdnuera" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/新住处第二天踩点总结/" data-id="cii07mum90003rtxne9g67gsu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -252,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/07/hello-world/" data-id="cihy5rbdn0000wj71perp79r0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/07/hello-world/" data-id="cii07mumm0009rtxnyayszga3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -289,7 +363,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/07/shareSDK关于ios9适配问题/" data-id="cihy5rbeb0007wj71sf3sitau" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/07/shareSDK关于ios9适配问题/" data-id="cii07mumi0008rtxnh3vuz1fg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -326,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/07/新住处到公司（第一天上班时间总结）/" data-id="cihy5rbe50004wj71e6qvnhlz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/07/新住处到公司（第一天上班时间总结）/" data-id="cii07mumb0004rtxnhguegwpf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -363,7 +437,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/06/忙碌的一天终于结束了/" data-id="cihy5rbe80005wj712f1oyqhs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/06/忙碌的一天终于结束了/" data-id="cii07mumd0005rtxnh7ktig56" class="article-share-link">Share</a>
       
       
     </footer>
@@ -388,7 +462,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">8</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">10</span></li></ul>
     </div>
   </div>
 
@@ -400,6 +474,14 @@
       <ul>
         
           <li>
+            <a href="/2015/12/10/使用ios自带的分享UIActivityViewController/">使用ios自带的分享UIActivityViewController</a>
+          </li>
+        
+          <li>
+            <a href="/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/">Xcode7真机/虚拟机运行手机屏幕上下黑边问题</a>
+          </li>
+        
+          <li>
             <a href="/2015/12/09/第三天踩点（最后一篇）/">第三天踩点（最后一篇）</a>
           </li>
         
@@ -409,14 +491,6 @@
         
           <li>
             <a href="/2015/12/08/今天晚上真是天真/">今天晚上真是天真</a>
-          </li>
-        
-          <li>
-            <a href="/2015/12/08/新住处第二天踩点总结/">新住处第二天踩点总结</a>
-          </li>
-        
-          <li>
-            <a href="/2015/12/07/hello-world/">Hello World</a>
           </li>
         
       </ul>
