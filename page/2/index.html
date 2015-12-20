@@ -65,6 +65,121 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Xcode7真机-虚拟机运行手机屏幕上下黑边问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/" class="article-date">
+  <time datetime="2015-12-10T11:34:21.000Z" itemprop="datePublished">2015-12-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/">Xcode7真机/虚拟机运行手机屏幕上下黑边问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近使用一些demo的时候，发现有的运行起来上下有黑边！最开始我以为这是Xcode某个地方设置的问题，就没有去管它！但是到后面我真正想弄得没有黑边的时候，我才发现到处都是正常的啊～那么问题在哪里呢？<br>于是我在网上找了下解决办法，<a href="http://blog.csdn.net/android_ls/article/details/39234963" target="_blank" rel="external">http://blog.csdn.net/android_ls/article/details/39234963</a><br>我发现这真是太神奇了！在LaunchImage中加上对应的图片就解决了！！<br>于是乎我就这么解决了这个问题！！！特别记录下！！！！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/" data-id="ciie2vfub000irqxnss7tt3nx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-第三天踩点（最后一篇）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/09/第三天踩点（最后一篇）/" class="article-date">
+  <time datetime="2015-12-09T01:44:49.000Z" itemprop="datePublished">2015-12-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/09/第三天踩点（最后一篇）/">第三天踩点（最后一篇）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天踩点成功，最后一篇咯！开心！！<br>今天上午8点起来，做好准备工作8:20走，到了楼下，拿出手机，看了下昨天晚上查找的新路线，然后2分钟就到公交站了，这次做的是185，我发现没有到我公司的站啊？但是奇怪，我看过过他路过那里啊！<br>不管，先上，反正89不离10.肯定很近！<br>于是呼上车了，看到车上的路线标示，发现有我公司的那个站，但是等车的牌子上没有！真是＊了狗！还是挺开心的，这次坐对了！<br>然后要到站的时候，屏幕上（车前面的屏幕，显示下一站啥啥的）显示的是另外的名字，但是我看这里就是我下车的地方啊！我还是下车了，好吧公交也欺负我！<br>反正这是我踩点的结果了，我就早上8:00起来，然后吃了饭到公司8:55.刚好，哈哈！<br>（踩点系列到此结束~~）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/09/第三天踩点（最后一篇）/" data-id="ciie2vfth0003rqxnifx6iyxo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-自己做微信图片浏览demo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/08/自己做微信图片浏览demo/" class="article-date">
+  <time datetime="2015-12-08T11:39:04.000Z" itemprop="datePublished">2015-12-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/08/自己做微信图片浏览demo/">自己做微信图片浏览demo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>实现方式是非常多的，其实昨天我就开始做这个东西了，但是发现网上的都太复杂了，而且自己也用不了那么多的功能，于是我就自己动手做一个吧！先看一下文件列表：</p>
+<p><img src="/images/1.png" alt="屏幕快照 2015-12-08 下午7.55.25.png"><br>Photo文件是图片对象，可以放图片的地址或者数据；<br>AllViewController是点击右下角出现所有图片显示的视图；<br>BorewViewController是左右滚动的视图；<br>BorewScrollView是每个在BorewViewController中滚动的item对象。<br>那么我们这样使用就可以了：<br>//封装图片数组，这里是给的数据，你也可以换成url<br>    NSMutableArray<photo*> <em>dataArr = [NSMutableArray new];<br>    for (int i = 0; i &lt; 5; i ++) {<br>        Photo </em> photo = [Photo new];<br>        photo.image = [UIImage imageNamed:@”123”];<br>        [dataArr addObject:photo];<br>        {<br>            Photo <em> photo = [Photo new];<br>            photo.image = [UIImage imageNamed:@”234”];<br>            [dataArr addObject:photo];<br>        }<br>    }<br>//直接给数组，然后弹出来就可以了<br>    BorewViewController </em>borew = [BorewViewController new];<br>    borew.photoArr = [dataArr mutableCopy];<br>    borew.index = 2;<br>    [self presentViewController:borew animated:YES completion:nil];<br>代码当然谁都可以看懂了，我这里就说下几个重要的地方就可以了：<br>一：BorewViewController中我没有一次性全部加在所有的图像，我是做了优化的，滚动到哪里就加载左右的就可以了；<br>二： if(!photo.image)<br>        {<br>            //异步获取图片信息<br>            dispatch_async(dispatch_queue_create(0, 0), ^{<br>                NSData *data = [NSData dataWithContentsOfURL:photo.url];<br>                photo.image = [UIImage imageWithData:data];<br>            });<br>        }<br>        scView.photo = photo;<br>这里我是把url获取到数据再给值，可以在显示所有图片时直接获取。<br>三：BorewScrollView中的缩放手势是直接用的滚动视图的，可以避免很多的问题，还是不错的；<br>四：[imageView setMultipleTouchEnabled:YES];这样才可以相应双击；<br>五：BorewScrollView中image的显示我是处理了的，<br><img src="/images/2.png" alt="2.png"><br>微信好像也是类似的处理吧（不知道）；<br>六：// 让UIImageView在UIScrollView缩放后居中显示  这个是直接设置的时候调用的</photo*></p>
+<ul>
+<li>(void)scrollViewDidZoom:(UIScrollView <em>)scrollView<br>{<br>  CGFloat offsetX = (scrollView.bounds.size.width &gt; scrollView.contentSize.width)?<br>  (scrollView.bounds.size.width - scrollView.contentSize.width) </em> 0.5 : 0.0;<br>  CGFloat offsetY = (scrollView.bounds.size.height &gt; scrollView.contentSize.height)?<br>  (scrollView.bounds.size.height - scrollView.contentSize.height) <em> 0.5 : 0.0;<br>  imageView.center = CGPointMake(scrollView.contentSize.width </em> 0.5 + offsetX,<br>  scrollView.contentSize.height * 0.5 + offsetY);<br>}这里我是没看懂的，没加效果也是一样的，不过可以用它来做点击的位置居中显示的效果；<br>七：最后把自己的代码奉上<a href="https://git.oschina.net/liyongshi.com/BorewViewController.git" target="_blank" rel="external">https://git.oschina.net/liyongshi.com/BorewViewController.git</a><br>然后自己pull吧</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/08/自己做微信图片浏览demo/" data-id="ciie2vftg0002rqxnm1sm7o26" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-今天晚上真是天真" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/12/08/今天晚上真是天真/" class="article-date">
@@ -92,7 +207,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/今天晚上真是天真/" data-id="ciie24djb000amoxncqgp3yv3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/今天晚上真是天真/" data-id="ciie2vfu0000drqxno3txghyt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -129,7 +244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/新住处第二天踩点总结/" data-id="ciie24dix0003moxnyetnd75v" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/新住处第二天踩点总结/" data-id="ciie2vftl0005rqxnffsp5y3e" class="article-share-link">Share</a>
       
       
     </footer>
@@ -174,7 +289,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/07/hello-world/" data-id="ciie24djj000emoxnwu0uc97m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/07/hello-world/" data-id="ciie2vfu9000hrqxnb6bd0w9n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -211,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/07/shareSDK关于ios9适配问题/" data-id="ciie24djg000dmoxntzsue8xg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/07/shareSDK关于ios9适配问题/" data-id="ciie2vfu8000grqxnszug8lbq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -248,7 +363,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/07/新住处到公司（第一天上班时间总结）/" data-id="ciie24diz0004moxnh2pmt018" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/07/新住处到公司（第一天上班时间总结）/" data-id="ciie2vftm0006rqxniudzmg5k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -285,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/06/忙碌的一天终于结束了/" data-id="ciie24dj30006moxn5dtqh2ro" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/06/忙碌的一天终于结束了/" data-id="ciie2vftq0008rqxnicdwgwp6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -314,7 +429,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">16</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">19</span></li></ul>
     </div>
   </div>
 
@@ -326,23 +441,23 @@
       <ul>
         
           <li>
+            <a href="/2015/12/20/获取应用缓存/">获取应用缓存</a>
+          </li>
+        
+          <li>
+            <a href="/2015/12/20/实现分段控件和多个表格视图联动/">实现分段控件和多个表格视图联动</a>
+          </li>
+        
+          <li>
+            <a href="/2015/12/20/滚动时实时获取UIDatePicker的值/">滚动时实时获取UIDatePicker的值</a>
+          </li>
+        
+          <li>
             <a href="/2015/12/20/把手机号输入格式限制成3-4-4位-如-135-5555-5555/">把手机号输入格式限制成3,4,4位(如:135 5555 5555)</a>
           </li>
         
           <li>
             <a href="/2015/12/20/一起来实现这个效果（1）/">一起来实现这个效果（1）</a>
-          </li>
-        
-          <li>
-            <a href="/2015/12/20/一个点子（希望有人实现了）/">一个点子（希望有人实现了）</a>
-          </li>
-        
-          <li>
-            <a href="/2015/12/20/奇葩的两天/">奇葩的两天</a>
-          </li>
-        
-          <li>
-            <a href="/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/">2 duplicate symbols for architecture arm64问题</a>
           </li>
         
       </ul>

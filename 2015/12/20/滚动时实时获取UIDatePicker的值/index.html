@@ -3,20 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>2 duplicate symbols for architecture arm64问题 | TheBloodElf Is Good</title>
+  <title>滚动时实时获取UIDatePicker的值 | TheBloodElf Is Good</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="先看下这个问题的描述：我今天开发的时候遇到两次这个问题了，两次的解决方法和出问题的地方都不一样，所以这里写一下原因：一：我第一次遇到这个问题是因为有两个地方同时放入了相同的文件夹，什么意思？加载网络图片自己放入了SDWebImage第三方，然后自己在网上下载了另外一个第三方，这个第三方中也有SDWebImage，所以就出错了；解决方法：你肯定知道了啊！二：第二次遇到这个错误的时候，我真是不知道什么">
+  <meta name="description" content="哎，自己基础没有学好哦！我以为这个有一个方法可以给我们回调，然后回调中获取就可以了，比如滚动视图的回调：- (void)scrollViewDidScroll:(UIScrollView *)scrollView但是我看了下UIDatePicker，发现代理都没有，这个怎么办呢？然后我们可以注意到这个细节， @interface UIDatePicker : UIControl 这个类是继承UIC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2 duplicate symbols for architecture arm64问题">
-<meta property="og:url" content="http://yoursite.com/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/index.html">
+<meta property="og:title" content="滚动时实时获取UIDatePicker的值">
+<meta property="og:url" content="http://yoursite.com/2015/12/20/滚动时实时获取UIDatePicker的值/index.html">
 <meta property="og:site_name" content="TheBloodElf Is Good">
-<meta property="og:description" content="先看下这个问题的描述：我今天开发的时候遇到两次这个问题了，两次的解决方法和出问题的地方都不一样，所以这里写一下原因：一：我第一次遇到这个问题是因为有两个地方同时放入了相同的文件夹，什么意思？加载网络图片自己放入了SDWebImage第三方，然后自己在网上下载了另外一个第三方，这个第三方中也有SDWebImage，所以就出错了；解决方法：你肯定知道了啊！二：第二次遇到这个错误的时候，我真是不知道什么">
-<meta property="og:image" content="http://yoursite.com/images/12.png">
-<meta property="og:image" content="http://yoursite.com/images/13.png">
-<meta property="og:updated_time" content="2015-12-17T10:07:40.000Z">
+<meta property="og:description" content="哎，自己基础没有学好哦！我以为这个有一个方法可以给我们回调，然后回调中获取就可以了，比如滚动视图的回调：- (void)scrollViewDidScroll:(UIScrollView *)scrollView但是我看了下UIDatePicker，发现代理都没有，这个怎么办呢？然后我们可以注意到这个细节， @interface UIDatePicker : UIControl 这个类是继承UIC">
+<meta property="og:updated_time" content="2015-12-20T04:58:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2 duplicate symbols for architecture arm64问题">
-<meta name="twitter:description" content="先看下这个问题的描述：我今天开发的时候遇到两次这个问题了，两次的解决方法和出问题的地方都不一样，所以这里写一下原因：一：我第一次遇到这个问题是因为有两个地方同时放入了相同的文件夹，什么意思？加载网络图片自己放入了SDWebImage第三方，然后自己在网上下载了另外一个第三方，这个第三方中也有SDWebImage，所以就出错了；解决方法：你肯定知道了啊！二：第二次遇到这个错误的时候，我真是不知道什么">
+<meta name="twitter:title" content="滚动时实时获取UIDatePicker的值">
+<meta name="twitter:description" content="哎，自己基础没有学好哦！我以为这个有一个方法可以给我们回调，然后回调中获取就可以了，比如滚动视图的回调：- (void)scrollViewDidScroll:(UIScrollView *)scrollView但是我看了下UIDatePicker，发现代理都没有，这个怎么办呢？然后我们可以注意到这个细节， @interface UIDatePicker : UIControl 这个类是继承UIC">
   
     <link rel="alternative" href="/atom.xml" title="TheBloodElf Is Good" type="application/atom+xml">
   
@@ -66,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-2-duplicate-symbols-for-architecture-arm64问题" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-滚动时实时获取UIDatePicker的值" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/" class="article-date">
-  <time datetime="2015-12-17T10:00:55.000Z" itemprop="datePublished">2015-12-17</time>
+    <a href="/2015/12/20/滚动时实时获取UIDatePicker的值/" class="article-date">
+  <time datetime="2015-12-20T04:54:48.000Z" itemprop="datePublished">2015-12-20</time>
 </a>
     
   </div>
@@ -80,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      2 duplicate symbols for architecture arm64问题
+      滚动时实时获取UIDatePicker的值
     </h1>
   
 
@@ -88,13 +86,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>先看下这个问题的描述：<br><img src="/images/12.png" alt="12.png"><br>我今天开发的时候遇到两次这个问题了，两次的解决方法和出问题的地方都不一样，所以这里写一下原因：<br>一：我第一次遇到这个问题是因为有两个地方同时放入了相同的文件夹，什么意思？加载网络图片自己放入了SDWebImage第三方，然后自己在网上下载了另外一个第三方，这个第三方中也有SDWebImage，所以就出错了；<br>解决方法：你肯定知道了啊！<br>二：第二次遇到这个错误的时候，我真是不知道什么原因，代码都好好的，但是直到我看到了这里：<br><img src="/images/13.png" alt="13.png">还真是大意啊！<br>解决方法：不给你说！</p>
-<p>附加：<br>还有很多问题会出现这样的错误，比如第三方不支持64位等等，所以自己慢慢研究吧～～</p>
+        <p>哎，自己基础没有学好哦！我以为这个有一个方法可以给我们回调，然后回调中获取就可以了，比如滚动视图的回调：- (void)scrollViewDidScroll:(UIScrollView *)scrollView<br>但是我看了下UIDatePicker，发现代理都没有，这个怎么办呢？<br>然后我们可以注意到这个细节， @interface UIDatePicker : UIControl <nscoding><br>这个类是继承UIControl的，那么就和按钮一样了，可以有dataPicker addTarget:(nullable id) action:(nonnull SEL) forControlEvents:(UIControlEvents)<br>那现在就知道怎么做了瑟！</nscoding></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/" data-id="ciie2vfsy0000rqxnumpv3r9i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/滚动时实时获取UIDatePicker的值/" data-id="ciie2vftj0004rqxnzuh541sq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -103,19 +100,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/12/20/奇葩的两天/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/12/20/实现分段控件和多个表格视图联动/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          奇葩的两天
+          实现分段控件和多个表格视图联动
         
       </div>
     </a>
   
   
-    <a href="/2015/12/13/公司项目流程/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/12/20/把手机号输入格式限制成3-4-4位-如-135-5555-5555/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">公司项目流程</div>
+      <div class="article-nav-title">把手机号输入格式限制成3,4,4位(如:135 5555 5555)</div>
     </a>
   
 </nav>
