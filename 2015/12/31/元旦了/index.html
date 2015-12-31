@@ -3,24 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>获取应用缓存 | TheBloodElf Is Good</title>
+  <title>元旦了 | TheBloodElf Is Good</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="代码如下，直接拷贝，//获取单个文件的大小
-
-(long long) fileSizeAtPath:(NSString) filePath{ NSFileManager manager = [NSFileManager defaultManager]; if ([manager fileExistsAtPath:filePath]){ return [[manager attributesOfIt">
+  <meta name="description" content="元旦了，哈哈！写个博客！！希望自己明年完成自己的职业定型！！然后就可以安心考虑另一半了。在这里写下自己对明年的期待，希望自己完成蜕变！但是只放一天，后天开始加班，哎！为了自己的明天，加班就加班吧！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="获取应用缓存">
-<meta property="og:url" content="http://yoursite.com/2015/12/20/获取应用缓存/index.html">
+<meta property="og:title" content="元旦了">
+<meta property="og:url" content="http://yoursite.com/2015/12/31/元旦了/index.html">
 <meta property="og:site_name" content="TheBloodElf Is Good">
-<meta property="og:description" content="代码如下，直接拷贝，//获取单个文件的大小
-
-(long long) fileSizeAtPath:(NSString) filePath{ NSFileManager manager = [NSFileManager defaultManager]; if ([manager fileExistsAtPath:filePath]){ return [[manager attributesOfIt">
-<meta property="og:updated_time" content="2015-12-20T05:10:37.000Z">
+<meta property="og:description" content="元旦了，哈哈！写个博客！！希望自己明年完成自己的职业定型！！然后就可以安心考虑另一半了。在这里写下自己对明年的期待，希望自己完成蜕变！但是只放一天，后天开始加班，哎！为了自己的明天，加班就加班吧！">
+<meta property="og:updated_time" content="2015-12-31T13:33:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="获取应用缓存">
-<meta name="twitter:description" content="代码如下，直接拷贝，//获取单个文件的大小
-
-(long long) fileSizeAtPath:(NSString) filePath{ NSFileManager manager = [NSFileManager defaultManager]; if ([manager fileExistsAtPath:filePath]){ return [[manager attributesOfIt">
+<meta name="twitter:title" content="元旦了">
+<meta name="twitter:description" content="元旦了，哈哈！写个博客！！希望自己明年完成自己的职业定型！！然后就可以安心考虑另一半了。在这里写下自己对明年的期待，希望自己完成蜕变！但是只放一天，后天开始加班，哎！为了自己的明天，加班就加班吧！">
   
     <link rel="alternative" href="/atom.xml" title="TheBloodElf Is Good" type="application/atom+xml">
   
@@ -70,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-获取应用缓存" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-元旦了" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/12/20/获取应用缓存/" class="article-date">
-  <time datetime="2015-12-20T05:08:35.000Z" itemprop="datePublished">2015-12-20</time>
+    <a href="/2015/12/31/元旦了/" class="article-date">
+  <time datetime="2015-12-31T13:30:57.000Z" itemprop="datePublished">2015-12-31</time>
 </a>
     
   </div>
@@ -84,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      获取应用缓存
+      元旦了
     </h1>
   
 
@@ -92,17 +86,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>代码如下，直接拷贝，<br>//获取单个文件的大小</p>
-<ul>
-<li>(long long) fileSizeAtPath:(NSString<em>) filePath{<br> NSFileManager</em> manager = [NSFileManager defaultManager];<br> if ([manager fileExistsAtPath:filePath]){<br> return [[manager attributesOfItemAtPath:filePath error:nil] fileSize];<br> }<br>  return 0;<br>}<br>//遍历文件夹获得文件夹大小，返回多少M</li>
-<li>(float ) folderSizeAtPath:(NSString<em>) folderPath{<br>NSFileManager</em> manager = [NSFileManager defaultManager];<br>if (![manager fileExistsAtPath:folderPath]) return 0;<br> NSEnumerator <em>childFilesEnumerator = [[manager subpathsAtPath:folderPath] objectEnumerator];<br> NSString</em> fileName;<br> long long folderSize = 0;<br> while ((fileName = [childFilesEnumerator nextObject]) != nil){<br> NSString<em> fileAbsolutePath = [folderPath stringByAppendingPathComponent:fileName];<br> folderSize += [self fileSizeAtPath:fileAbsolutePath];<br>  }<br>  return folderSize/(1024.0</em>1024.0);<br>}<br>//得到系统中总的缓存大小</li>
-<li>(float)getSizeOfAPP<br>{<br>  NSArray <em>paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);<br>  NSString </em>path = [paths lastObject];<br>  return [self folderSizeAtPath:path];<br>}<br>使用方法：[self getSizeOfApp],就返回大小了，是m为单位，可以自己改</li>
-</ul>
+        <p>元旦了，哈哈！写个博客！！<br>希望自己明年完成自己的职业定型！！然后就可以安心考虑另一半了。<br>在这里写下自己对明年的期待，希望自己完成蜕变！<br>但是只放一天，后天开始加班，哎！<br>为了自己的明天，加班就加班吧！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/获取应用缓存/" data-id="ciiual8tg0001ckxnwzlg01v7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/31/元旦了/" data-id="ciiual8u1000cckxnseqrcrhb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -111,19 +100,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/12/31/元旦了/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          元旦了
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/20/实现分段控件和多个表格视图联动/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/12/20/获取应用缓存/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">实现分段控件和多个表格视图联动</div>
+      <div class="article-nav-title">获取应用缓存</div>
     </a>
   
 </nav>
