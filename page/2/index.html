@@ -65,6 +65,44 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-一起来实现这个效果（1）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/20/一起来实现这个效果（1）/" class="article-date">
+  <time datetime="2015-12-20T04:40:24.000Z" itemprop="datePublished">2015-12-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/20/一起来实现这个效果（1）/">一起来实现这个效果（1）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>先来看看效果：</p>
+<p><img src="/images/14.png" alt="14.png"><br>我们要做的就是实现上面的圆角（只有左上和右上两个哦），还有中间分隔的线条。<br>一：实现圆角<br>  我定制一些效果的时候通常都是在View层面的，偶尔会用到layer（比如圆角矩形）,但是这个只有两个圆角的我是没办法了，网上看了下资料，大概是这样的：<br>  //在这里设置上边两个角为圆角   画上中间的分割线<br>    UIBezierPath <em>maskPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight  cornerRadii:CGSizeMake(30, 30)];<br>    CAShapeLayer </em>maskLayer = [CAShapeLayer new];<br>    maskLayer.frame = rect;<br>    maskLayer.path = maskPath.CGPath;<br>    self.layer.mask = maskLayer;<br>    这个就是更深的定制了，我们还得好好的不断的学习啊！<br>二：中间的线条，这个就简单了，我们应该都会<br> UIBezierPath <em>basePath = [UIBezierPath new];<br>    [[UIColor groupTableViewBackgroundColor] setStroke];<br>    //画横着的三条线<br>    for (int i = 0; i &lt; 3; i ++) {<br>        CGFloat lineY = (i + 1) </em> (rect.size.width / 3);<br>        [basePath moveToPoint:CGPointMake(0, lineY)];<br>        [basePath addLineToPoint:CGPointMake(rect.size.width, lineY)];<br>        [basePath stroke];<br>    }<br>    //画竖着的两条线<br>    for (int i = 0; i &lt; 2; i ++) {<br>        CGFloat lineX = (i + 1) * (rect.size.width / 3);<br>        [basePath moveToPoint:CGPointMake(lineX, 0)];<br>        [basePath addLineToPoint:CGPointMake(lineX, rect.size.height)];<br>        [basePath stroke];<br>    }<br>其实上面两个可以合成一个，不过我c++算法已经很久没有弄了，还是算了！（脑袋不够用了）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/20/一起来实现这个效果（1）/" data-id="cimc6ez5d000gdzxna8hukv9x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-一个点子（希望有人实现了）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/12/20/一个点子（希望有人实现了）/" class="article-date">
@@ -92,7 +130,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/一个点子（希望有人实现了）/" data-id="cikzcmrug000hi171kg2cd17t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/一个点子（希望有人实现了）/" data-id="cimc6ez5f000hdzxnqf02hi9m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -129,7 +167,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/奇葩的两天/" data-id="cikzcmru4000bi171tydpgql0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/奇葩的两天/" data-id="cimc6ez54000bdzxnw38oqk49" class="article-share-link">Share</a>
       
       
     </footer>
@@ -167,7 +205,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/" data-id="cikzcmrt00000i171y7msk5vw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/" data-id="cimc6ez450000dzxn4xvzumih" class="article-share-link">Share</a>
       
       
     </footer>
@@ -206,7 +244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/13/公司项目流程/" data-id="cikzcmru6000ci171acnrevhz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/13/公司项目流程/" data-id="cimc6ez55000cdzxnjvdmitw9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -243,7 +281,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/10/使用ios自带的分享UIActivityViewController/" data-id="cikzcmru9000ei171qtv1y7f7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/10/使用ios自带的分享UIActivityViewController/" data-id="cimc6ez58000edzxn2o63xoll" class="article-share-link">Share</a>
       
       
     </footer>
@@ -280,7 +318,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/" data-id="cikzcmruq000mi1716haljzqh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/" data-id="cimc6ez5t000ndzxngmkpd5lr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -317,7 +355,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/09/第三天踩点（最后一篇）/" data-id="cikzcmrtp0004i171w8zgnax8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/09/第三天踩点（最后一篇）/" data-id="cimc6ez4p0004dzxnbqwjhtv6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -358,7 +396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/自己做微信图片浏览demo/" data-id="cikzcmrtl0002i1714vn8onu8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/自己做微信图片浏览demo/" data-id="cimc6ez4m0002dzxnlekfzlvm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -395,44 +433,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/今天晚上真是天真/" data-id="cikzcmrub000fi171ocgpefro" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-新住处第二天踩点总结" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/08/新住处第二天踩点总结/" class="article-date">
-  <time datetime="2015-12-08T01:10:31.000Z" itemprop="datePublished">2015-12-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/08/新住处第二天踩点总结/">新住处第二天踩点总结</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>因为想着昨天是7:30起来然后8:20到的，所以今天索性就8:00起来，然后8:50到了！想象总是美好的～～<br>8点起床，刷牙洗脸，突然肚子疼～去上个厕所，发现8:20了。好紧张<br>赶忙下楼坐车（先到了再吃饭），今天因为是打算找另外的公交去上班，所以去了另外的站台，走上了自己认为对的公交（26路）。然后发现路线开始是对的，后面反了～赶紧下车！（时间8:34）<br>拿出高德地图（记住一定是高德啊），导航，发现公交只到了一半路，我自己还得走一半路才能到公司～好吧我还是得走啊～～～～<br>到了公司了（时间8:50），得先吃饭，时间要9:00了，我一直都是9:00前到的，要保持习惯，我就去超市买了面包带上去吃吧！然后吃完时间刚好9:05。<br>于是我就写下了这个blog<br>明天继续踩点～～～等找对路线了我就不写”踩点系列“了～</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/新住处第二天踩点总结/" data-id="cikzcmrtt0006i17142w8om3u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/今天晚上真是天真/" data-id="cimc6ez5a000fdzxnkxbe8zwu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -461,7 +462,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">20</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">20</span></li></ul>
     </div>
   </div>
 
@@ -471,6 +472,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/03/28/github按star排名，作用讲解（一）/">github按star排名，作用讲解（一）</a>
+          </li>
         
           <li>
             <a href="/2016/02/23/coredata小结/">coredata小结</a>
@@ -486,10 +491,6 @@
         
           <li>
             <a href="/2016/01/16/终于完成了，记录下！/">终于完成了，记录下！</a>
-          </li>
-        
-          <li>
-            <a href="/2015/12/31/元旦了/">元旦了</a>
           </li>
         
       </ul>

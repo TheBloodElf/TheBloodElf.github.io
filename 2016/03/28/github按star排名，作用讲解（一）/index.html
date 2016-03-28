@@ -3,19 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>实现分段控件和多个表格视图联动 | TheBloodElf Is Good</title>
+  <title>github按star排名，作用讲解（一） | TheBloodElf Is Good</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="先看看效果：点上面的，下面的表格视图会切换，下面滑动的时候，上面的分段控件值会相应的改变，我就讲讲思路：一：下面的三个表格视图其实是有三个控制器，只是把各自的控制器的view加到主控制器的controllerScrollView了，二：加之前有一些必要的操作， self.automaticallyAdjustsScrollViewInsets = NO;[self addChildViewCont">
+  <meta name="description" content="1:AFNetworking                    网络请求库2:SDWebImage                    控件加载网络图片3:ReactiveCocoa                    函数式响应式编程4:GPUImage                        图像操作，滤镜等5:Masonry                        代码实">
 <meta property="og:type" content="article">
-<meta property="og:title" content="实现分段控件和多个表格视图联动">
-<meta property="og:url" content="http://yoursite.com/2015/12/20/实现分段控件和多个表格视图联动/index.html">
+<meta property="og:title" content="github按star排名，作用讲解（一）">
+<meta property="og:url" content="http://yoursite.com/2016/03/28/github按star排名，作用讲解（一）/index.html">
 <meta property="og:site_name" content="TheBloodElf Is Good">
-<meta property="og:description" content="先看看效果：点上面的，下面的表格视图会切换，下面滑动的时候，上面的分段控件值会相应的改变，我就讲讲思路：一：下面的三个表格视图其实是有三个控制器，只是把各自的控制器的view加到主控制器的controllerScrollView了，二：加之前有一些必要的操作， self.automaticallyAdjustsScrollViewInsets = NO;[self addChildViewCont">
-<meta property="og:image" content="http://yoursite.com/images/15.png">
-<meta property="og:updated_time" content="2015-12-20T05:07:11.000Z">
+<meta property="og:description" content="1:AFNetworking                    网络请求库2:SDWebImage                    控件加载网络图片3:ReactiveCocoa                    函数式响应式编程4:GPUImage                        图像操作，滤镜等5:Masonry                        代码实">
+<meta property="og:updated_time" content="2016-03-28T15:54:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="实现分段控件和多个表格视图联动">
-<meta name="twitter:description" content="先看看效果：点上面的，下面的表格视图会切换，下面滑动的时候，上面的分段控件值会相应的改变，我就讲讲思路：一：下面的三个表格视图其实是有三个控制器，只是把各自的控制器的view加到主控制器的controllerScrollView了，二：加之前有一些必要的操作， self.automaticallyAdjustsScrollViewInsets = NO;[self addChildViewCont">
+<meta name="twitter:title" content="github按star排名，作用讲解（一）">
+<meta name="twitter:description" content="1:AFNetworking                    网络请求库2:SDWebImage                    控件加载网络图片3:ReactiveCocoa                    函数式响应式编程4:GPUImage                        图像操作，滤镜等5:Masonry                        代码实">
   
     <link rel="alternative" href="/atom.xml" title="TheBloodElf Is Good" type="application/atom+xml">
   
@@ -65,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-实现分段控件和多个表格视图联动" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-github按star排名，作用讲解（一）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/12/20/实现分段控件和多个表格视图联动/" class="article-date">
-  <time datetime="2015-12-20T05:00:29.000Z" itemprop="datePublished">2015-12-20</time>
+    <a href="/2016/03/28/github按star排名，作用讲解（一）/" class="article-date">
+  <time datetime="2016-03-28T15:54:11.000Z" itemprop="datePublished">2016-03-28</time>
 </a>
     
   </div>
@@ -79,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      实现分段控件和多个表格视图联动
+      github按star排名，作用讲解（一）
     </h1>
   
 
@@ -87,12 +86,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>先看看效果：<br><img src="/images/15.png" alt="15.png"><br>点上面的，下面的表格视图会切换，下面滑动的时候，上面的分段控件值会相应的改变，<br>我就讲讲思路：<br>一：下面的三个表格视图其实是有三个控制器，只是把各自的控制器的view加到主控制器的controllerScrollView了，<br>二：加之前有一些必要的操作， self.automaticallyAdjustsScrollViewInsets = NO;<br>[self addChildViewController:controller];//只有加入子控制后才能加入view<br>[controllerScrollView addSubview:controller.view];//就可以加入子控制器的视图了<br>三：然后操作方式就和普通的一样了。</p>
+        <p>1:AFNetworking                    网络请求库<br>2:SDWebImage                    控件加载网络图片<br>3:ReactiveCocoa                    函数式响应式编程<br>4:GPUImage                        图像操作，滤镜等<br>5:Masonry                        代码实现控件布局<br>6:MBProgressHUD                    菊花加载指示器<br>7:RestKit                            封装了请求数据、解析和存储（请求(使用AFNetworking)、模型字典转换和底层coredata操作）, REST时变现卓越<br>8:fmdb                            sqlite3数据库的操作封装<br>9:Mantle                            对MVC中model层的封装，意在减少我们建立model的代码（唱吧6.0已使用）<br>10:MagicalRecord                    使得操作cordate更简单<br>11:Alcatraz                        管理插件的XCode插件<br>12:JSQMessagesViewController        聊天控制器，如果自己写聊天，还是可以使用的，减少很多代码<br>13:three20                        iPhone应用开发框架,（自己定义了很多独特的控件/控制器：图片浏览器，短信编辑控制器等）<br>14:SVProgressHUD                    菊花加载指示器<br>15: CocoaLumberjack                日志框架<br>16:iCarousel                        卡片浏览库，很炫酷，同时需要懂高等数学<br>17:VVDocumenter-Xcode                Xcode中快速生成注释</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/实现分段控件和多个表格视图联动/" data-id="cimc6ez53000adzxnqf4j1q5t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/28/github按star排名，作用讲解（一）/" data-id="cimc6ez5m000kdzxnvixmeftt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -101,19 +100,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/12/20/获取应用缓存/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          获取应用缓存
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/20/滚动时实时获取UIDatePicker的值/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/02/23/coredata小结/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">滚动时实时获取UIDatePicker的值</div>
+      <div class="article-nav-title">coredata小结</div>
     </a>
   
 </nav>
