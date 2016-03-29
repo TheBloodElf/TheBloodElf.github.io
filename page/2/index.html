@@ -65,6 +65,44 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-把手机号输入格式限制成3-4-4位-如-135-5555-5555" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/20/把手机号输入格式限制成3-4-4位-如-135-5555-5555/" class="article-date">
+  <time datetime="2015-12-20T04:50:12.000Z" itemprop="datePublished">2015-12-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/20/把手机号输入格式限制成3-4-4位-如-135-5555-5555/">把手机号输入格式限制成3,4,4位(如:135 5555 5555)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>带入如下，思想就是做一个过滤和格式化：</p>
+<p>#pragma mark 把电话号码格式变成135 5555 5555的样子<br>-(BOOL)textField:(UITextField <em>)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString </em>)string {<br>    if(textField.tag == DianHua)<br>    {<br>        NSCharacterSet <em>characterSet = [NSCharacterSet characterSetWithCharactersInString:@”0123456789\b”];<br>        string = [string stringByReplacingOccurrencesOfString:@” “ withString:@””];<br>        if ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) {<br>            return NO;<br>        }<br>        NSString </em>text = [textField text];<br>        text = [text stringByReplacingCharactersInRange:range withString:string];<br>        text = [text stringByReplacingOccurrencesOfString:@” “ withString:@””];<br>        if (text.length == 0) {<br>            [textField setText:@””];<br>        }<br>        else if (text.length &lt;= 3) {<br>            NSString <em>str1 = [text substringWithRange:NSMakeRange(0, text.length)];<br>            [textField setText:[NSString stringWithFormat:@”%@”, str1]];<br>        }<br>        else if (text.length &gt; 3 &amp;&amp; text.length &lt;= 7) {<br>            NSString </em>str1 = [text substringWithRange:NSMakeRange(0, 3)];<br>            NSString <em>str2 = [text substringWithRange:NSMakeRange(3, text.length - 3)];<br>            [textField setText:[NSString stringWithFormat:@”%@ %@”, str1, str2]];<br>        }<br>        else if (text.length &gt; 7 &amp;&amp; text.length &lt;= 11) {<br>            NSString </em>str1 = [text substringWithRange:NSMakeRange(0, 3)];<br>            NSString <em>str2 = [text substringWithRange:NSMakeRange(3, 4)];<br>            NSString </em>str3 = [text substringWithRange:NSMakeRange(7, text.length - 7)];<br>            [textField setText:[NSString stringWithFormat:@”%@ %@ %@”, str1, str2, str3]];<br>        }<br>        return NO;<br>    }<br>    return YES;<br>}<br>使用方法：设置代理就可以了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/20/把手机号输入格式限制成3-4-4位-如-135-5555-5555/" data-id="cimcw3f2200088qa50rzjbhrv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-一起来实现这个效果（1）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/12/20/一起来实现这个效果（1）/" class="article-date">
@@ -93,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/一起来实现这个效果（1）/" data-id="cimc6ez5d000gdzxna8hukv9x" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/一起来实现这个效果（1）/" data-id="cimcw3f2k000g8qa5sa0rvr0j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -130,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/一个点子（希望有人实现了）/" data-id="cimc6ez5f000hdzxnqf02hi9m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/一个点子（希望有人实现了）/" data-id="cimcw3f2m000h8qa5n6g21alz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -167,7 +205,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/奇葩的两天/" data-id="cimc6ez54000bdzxnw38oqk49" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/奇葩的两天/" data-id="cimcw3f2a000b8qa5a7xtsavb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -205,7 +243,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/" data-id="cimc6ez450000dzxn4xvzumih" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/" data-id="cimcw3f1600008qa5dyqk8f68" class="article-share-link">Share</a>
       
       
     </footer>
@@ -244,7 +282,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/13/公司项目流程/" data-id="cimc6ez55000cdzxnjvdmitw9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/13/公司项目流程/" data-id="cimcw3f2b000c8qa5lpf35ckx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -281,7 +319,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/10/使用ios自带的分享UIActivityViewController/" data-id="cimc6ez58000edzxn2o63xoll" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/10/使用ios自带的分享UIActivityViewController/" data-id="cimcw3f2f000e8qa51kohkmi6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -318,7 +356,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/" data-id="cimc6ez5t000ndzxngmkpd5lr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/" data-id="cimcw3f30000o8qa5ib5meiu3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -355,7 +393,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/09/第三天踩点（最后一篇）/" data-id="cimc6ez4p0004dzxnbqwjhtv6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/09/第三天踩点（最后一篇）/" data-id="cimcw3f1u00048qa5npouikyb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -396,44 +434,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/自己做微信图片浏览demo/" data-id="cimc6ez4m0002dzxnlekfzlvm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-今天晚上真是天真" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/08/今天晚上真是天真/" class="article-date">
-  <time datetime="2015-12-08T11:30:12.000Z" itemprop="datePublished">2015-12-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/08/今天晚上真是天真/">今天晚上真是天真</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天下午要下班的时候，我特意百度了下有没有方便的回家路线（不一定是最近）。发现还真有一条：171a，这条路线我走路只需要3分钟，你没看错，只需要3分钟。正常情况10分钟左右～<br>然后我就高高兴兴的下楼了，下楼2分钟就到了171a的地点，开始等车，时间是6:10。这时候人很少，我就觉得应该不挤，就是期盼车早点来了！<br>时间慢慢的过去了，到了6:20，我等了10分钟～～～车来了，这时候人也多起来了，哎～停车了，我打算上去，前门上不了，我上后门。想多了，太挤了～根本上不去，我等下一班吧！<br>车来了，依然上不了！我拿起手机uber，正准备叫车的时候，我想了想自己这么穷还是走路到其他地方吧！<br>于是我就按着今天上午的方式原路返回，发现世界真小，我又上了今天上午坐错车的26路。这个虽然是错的，但是我已经走完了错的路线！！！<br>这时候是6:45.我终于可以回家了！<br>这个经验告诉我，好的不一定是有用的，我还是明天继续踩点吧～～～</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/今天晚上真是天真/" data-id="cimc6ez5a000fdzxnkxbe8zwu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/自己做微信图片浏览demo/" data-id="cimcw3f1q00028qa5v7co7xai" class="article-share-link">Share</a>
       
       
     </footer>
@@ -462,7 +463,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">20</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">20</span></li></ul>
     </div>
   </div>
 
@@ -472,6 +473,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/03/29/github按star排名，作用讲解（二）/">github按star排名，作用讲解（二）</a>
+          </li>
         
           <li>
             <a href="/2016/03/28/github按star排名，作用讲解（一）/">github按star排名，作用讲解（一）</a>
@@ -487,10 +492,6 @@
         
           <li>
             <a href="/2016/02/23/RAC小结/">@RAC小结</a>
-          </li>
-        
-          <li>
-            <a href="/2016/01/16/终于完成了，记录下！/">终于完成了，记录下！</a>
           </li>
         
       </ul>
