@@ -65,6 +65,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-RAC小结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/23/RAC小结/" class="article-date">
+  <time datetime="2016-02-23T11:45:42.000Z" itemprop="datePublished">2016-02-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/23/RAC小结/">@RAC小结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ReactiveCocoa一些词语含义:<br>map:id1(id2 value)   把id2类型通过value转换为id1类型<br>subscribeNext:(id value)   添加一个订阅，不然之前的都不会执行<br>RAC(self,name)      RAC宏允许直接把信号的输出应用到对象的属性上<br>doNext    附加操作，第一个执行，不会影响事件流<br>filter:BOOL(id value)  返回bool值，判断是否会继续执行下面<br>flattenMap:id(id balue)    使用内部的信号来作为下面接着事件的返回值<br>error:^(NSError *error)    内部发送了一个错误<br>then   方法会等待completed事件的发送,然后才继续下面的订阅<br>deliverOn:[RACScheduler mainThreadScheduler]<br>scheduler 表现为RACScheduler类，类似于GCD<br>-concat: 把一个水管(RACSequence)拼接到还有一个水管(RACSequence)之后<br>-flatten:序列连接(RACSequence)<br>+merge: 前面在flatten中提到的水龙头(RACSubject)的合并<br>-switchToLatest: 取指定的那个水龙头(RACSubject)的吐出的最新玻璃球</p>
+<p>技巧：<br>移除subscribeNext：block，转而使用RAC宏 效果是一样的<br>RAC宏允许直接把信号的输出应用到对象的属性上</p>
+<p>注意点:<br>subjects 表现为RACSubject类，能够觉得是“可变的（mutable）”信号/自己定义信号，它是嫁接非RAC代码到Signals世界的桥梁，非常实用。嗯。。。 这样讲还是非常抽象，举个样例吧：<br>RACSubject <em> letters = [ RACSubject subject ] ;<br>RACSignal </em> signal = [letters sendNext : @ “a” ] ;<br>能够看到 @”a” 仅仅是一个NSString对象，要想在水管里顺利流动，就要借RACSubject的力。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/02/23/RAC小结/" data-id="cimhjslye000vuta5ajrk6ob6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-终于完成了，记录下！" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/16/终于完成了，记录下！/" class="article-date">
@@ -92,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/16/终于完成了，记录下！/" data-id="cimhfmabt00039ua515aiiiy4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/16/终于完成了，记录下！/" data-id="cimhjslws0003uta5m2jfuw6x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -129,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/31/元旦了/" data-id="cimhfmace000d9ua5qpsea5mu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/31/元旦了/" data-id="cimhjslxe000duta5sni09zdk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -171,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/获取应用缓存/" data-id="cimhfmabn00019ua5u5auvexe" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/获取应用缓存/" data-id="cimhjslwp0001uta5ckqjdbsa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -208,7 +247,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/实现分段控件和多个表格视图联动/" data-id="cimhfmac9000a9ua5y94m5v42" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/实现分段控件和多个表格视图联动/" data-id="cimhjslx8000auta5bliuq3dp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -245,7 +284,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/滚动时实时获取UIDatePicker的值/" data-id="cimhfmabx00059ua58juamjt9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/滚动时实时获取UIDatePicker的值/" data-id="cimhjslwx0005uta5kxdqze5t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -283,7 +322,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/把手机号输入格式限制成3-4-4位-如-135-5555-5555/" data-id="cimhfmac500089ua5tb21zsxe" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/把手机号输入格式限制成3-4-4位-如-135-5555-5555/" data-id="cimhjslx40008uta5sonqjzfo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -321,7 +360,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/一起来实现这个效果（1）/" data-id="cimhfmacl000g9ua5jxtqfjjt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/一起来实现这个效果（1）/" data-id="cimhjslxm000guta5j9rbie14" class="article-share-link">Share</a>
       
       
     </footer>
@@ -358,7 +397,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/一个点子（希望有人实现了）/" data-id="cimhfmacn000h9ua5k40xnx9m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/一个点子（希望有人实现了）/" data-id="cimhjslxo000huta57d0jywmk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -395,45 +434,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/奇葩的两天/" data-id="cimhfmaca000b9ua54hmvkfmh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2-duplicate-symbols-for-architecture-arm64问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/" class="article-date">
-  <time datetime="2015-12-17T10:00:55.000Z" itemprop="datePublished">2015-12-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/">2 duplicate symbols for architecture arm64问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>先看下这个问题的描述：<br><img src="/images/12.png" alt="12.png"><br>我今天开发的时候遇到两次这个问题了，两次的解决方法和出问题的地方都不一样，所以这里写一下原因：<br>一：我第一次遇到这个问题是因为有两个地方同时放入了相同的文件夹，什么意思？加载网络图片自己放入了SDWebImage第三方，然后自己在网上下载了另外一个第三方，这个第三方中也有SDWebImage，所以就出错了；<br>解决方法：你肯定知道了啊！<br>二：第二次遇到这个错误的时候，我真是不知道什么原因，代码都好好的，但是直到我看到了这里：<br><img src="/images/13.png" alt="13.png">还真是大意啊！<br>解决方法：不给你说！</p>
-<p>附加：<br>还有很多问题会出现这样的错误，比如第三方不支持64位等等，所以自己慢慢研究吧～～</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/" data-id="cimhfmab300009ua52g9yuitm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/奇葩的两天/" data-id="cimhjslxa000buta5navtm9v6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -462,7 +463,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">20</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">20</span></li></ul>
     </div>
   </div>
 
@@ -472,6 +473,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/04/01/github按star排名，作用讲解（八）/">github按star排名，作用讲解（八）</a>
+          </li>
         
           <li>
             <a href="/2016/04/01/github按star排名，作用讲解（七）/">github按star排名，作用讲解（七）</a>
@@ -487,10 +492,6 @@
         
           <li>
             <a href="/2016/03/31/github按star排名，作用讲解（四）/">github按star排名，作用讲解（四）</a>
-          </li>
-        
-          <li>
-            <a href="/2016/03/31/github按star排名，作用讲解（三）/">github按star排名，作用讲解（三）</a>
           </li>
         
       </ul>
