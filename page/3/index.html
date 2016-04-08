@@ -65,6 +65,85 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-元旦了" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/31/元旦了/" class="article-date">
+  <time datetime="2015-12-31T13:30:57.000Z" itemprop="datePublished">2015-12-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/31/元旦了/">元旦了</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>元旦了，哈哈！写个博客！！<br>希望自己明年完成自己的职业定型！！然后就可以安心考虑另一半了。<br>在这里写下自己对明年的期待，希望自己完成蜕变！<br>但是只放一天，后天开始加班，哎！<br>为了自己的明天，加班就加班吧！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/31/元旦了/" data-id="cimrlzo63000dbua5oxznumgm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-获取应用缓存" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/20/获取应用缓存/" class="article-date">
+  <time datetime="2015-12-20T05:08:35.000Z" itemprop="datePublished">2015-12-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/20/获取应用缓存/">获取应用缓存</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>代码如下，直接拷贝，<br>//获取单个文件的大小</p>
+<ul>
+<li>(long long) fileSizeAtPath:(NSString<em>) filePath{<br> NSFileManager</em> manager = [NSFileManager defaultManager];<br> if ([manager fileExistsAtPath:filePath]){<br> return [[manager attributesOfItemAtPath:filePath error:nil] fileSize];<br> }<br>  return 0;<br>}<br>//遍历文件夹获得文件夹大小，返回多少M</li>
+<li>(float ) folderSizeAtPath:(NSString<em>) folderPath{<br>NSFileManager</em> manager = [NSFileManager defaultManager];<br>if (![manager fileExistsAtPath:folderPath]) return 0;<br> NSEnumerator <em>childFilesEnumerator = [[manager subpathsAtPath:folderPath] objectEnumerator];<br> NSString</em> fileName;<br> long long folderSize = 0;<br> while ((fileName = [childFilesEnumerator nextObject]) != nil){<br> NSString<em> fileAbsolutePath = [folderPath stringByAppendingPathComponent:fileName];<br> folderSize += [self fileSizeAtPath:fileAbsolutePath];<br>  }<br>  return folderSize/(1024.0</em>1024.0);<br>}<br>//得到系统中总的缓存大小</li>
+<li>(float)getSizeOfAPP<br>{<br>  NSArray <em>paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);<br>  NSString </em>path = [paths lastObject];<br>  return [self folderSizeAtPath:path];<br>}<br>使用方法：[self getSizeOfApp],就返回大小了，是m为单位，可以自己改</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/20/获取应用缓存/" data-id="cimrlzo5g0001bua5ctbcta3a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-实现分段控件和多个表格视图联动" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/12/20/实现分段控件和多个表格视图联动/" class="article-date">
@@ -92,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/实现分段控件和多个表格视图联动/" data-id="cimora3hd000aega5hh9b8dj9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/实现分段控件和多个表格视图联动/" data-id="cimrlzo5y000abua5qjhjr3qa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -129,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/滚动时实时获取UIDatePicker的值/" data-id="cimora3h20005ega5yd10fjv7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/滚动时实时获取UIDatePicker的值/" data-id="cimrlzo5o0005bua5qj91kipt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -167,7 +246,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/把手机号输入格式限制成3-4-4位-如-135-5555-5555/" data-id="cimora3h80008ega5n105yl5e" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/把手机号输入格式限制成3-4-4位-如-135-5555-5555/" data-id="cimrlzo5t0008bua5bu37vt2o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -205,7 +284,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/一起来实现这个效果（1）/" data-id="cimora3ho000gega5dusf5hwz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/一起来实现这个效果（1）/" data-id="cimrlzo68000gbua5spgttgpi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -242,7 +321,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/一个点子（希望有人实现了）/" data-id="cimora3hq000hega5gskkm1gk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/一个点子（希望有人实现了）/" data-id="cimrlzo6b000hbua5m4e2f4o7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -279,7 +358,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/奇葩的两天/" data-id="cimora3hf000bega5trg3uhtr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/奇葩的两天/" data-id="cimrlzo60000bbua5fabc4tzk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -317,7 +396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/" data-id="cimora3gj0000ega55wcsc04z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/" data-id="cimrlzo570000bua5frotnyy9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -356,81 +435,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/13/公司项目流程/" data-id="cimora3hh000cega50jqeiuof" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-使用ios自带的分享UIActivityViewController" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/10/使用ios自带的分享UIActivityViewController/" class="article-date">
-  <time datetime="2015-12-10T11:44:20.000Z" itemprop="datePublished">2015-12-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/10/使用ios自带的分享UIActivityViewController/">使用ios自带的分享UIActivityViewController</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>先看下效果吧，<br><img src="/images/3.png" alt="3.png">其中微信和微信朋友圈是自己定制的，然后其他的是系统默认的（系统会根据分享内容情况来选择性的弹出社交平台）。其实为什么我们要定制呢？<br>我们发现微博那些系统都是能够自动的弹出来的，但是唯独微信不可以，我就百度了下，发现苹果的应用imessage和微信功能差不多，所以都懂的瑟（小规模市场）！那么我们就开始定制吧：<br>一：倒入weixinsdk，然后加上一些必须要的库：<br><img src="/images/4.png" alt="4.png"><br>最好都加上，我自己琢磨出来的，<br>二：加上白名单：<br><img src="/images/5.png" alt="5.png"><br>三：加上url scheme和网络请求：<br><img src="/images/6.png" alt="6.png"><br><img src="/images/7.png" alt="7.png"><br>四：头文件和pch文件还是必须要的：<br><img src="/images/8.png" alt="8.png"><br><img src="/images/9.png" alt="9.png"><br><img src="/images/10.png" alt="10.png"><br>五：现在可以开始敲代码了，<br><img src="/images/11.png" alt="11.png"><br>我们来看看a处，是一个需要分享的对象，b就是初始化分享视图了（系统的），第一个参数是一个数组，所以我写了一个方法把属性封装成数组（[model itemsArr]），第二个参数是一个数组，如果为空则系统默认弹出平台，如果不为空，就是在默认基础上加上数组的内容了！<br>六：我们来看看具体的+ (NSArray*)activityArr<br>{<br>    return @[[WeixinSessionActivity new]；<br>    [WeixinTimelineActivity new]];<br>}这个就是那两个自定义项了，这两个是继承WeixinActivity，WeixinActivity继承UIActivity，你也可以直接继承UIActivity，但是面向对象嘛！然后我们重写的方法就是写出来的那几个，注释我都写好了的，你们一定能看懂。<br>七：遇到的问题，好的，那么现在我来说下纠结的问题吧：如果你自己有苹果手机，你可以看看系统图片的分享，里面的微信还有一个小的视图控制器，那么那个是什么东西呢？好吧，那个属于share扩展，也就是说那个是微信自己做好的，我们也可以做一个然后就可以在分享中看到自己的应用了！那么我们在自己的应用中可以简单的集成吗？答案是否定的，苹果没有把他加入sdk，我们只能自己做，也就是不进入微信就完成微信的分享功能，这个就有点复杂了，界面自己搭，请求自己去官网找！我的demo没有做这个，我就使用了进入微信完成分享的简便途径。<br>八：老规矩，代码奉上：<a href="https://git.oschina.net/liyongshi.com/ShareViewController.git" target="_blank" rel="external">https://git.oschina.net/liyongshi.com/ShareViewController.git</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/10/使用ios自带的分享UIActivityViewController/" data-id="cimora3hk000eega5n0mwz1di" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Xcode7真机-虚拟机运行手机屏幕上下黑边问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/" class="article-date">
-  <time datetime="2015-12-10T11:34:21.000Z" itemprop="datePublished">2015-12-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/">Xcode7真机/虚拟机运行手机屏幕上下黑边问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近使用一些demo的时候，发现有的运行起来上下有黑边！最开始我以为这是Xcode某个地方设置的问题，就没有去管它！但是到后面我真正想弄得没有黑边的时候，我才发现到处都是正常的啊～那么问题在哪里呢？<br>于是我在网上找了下解决办法，<a href="http://blog.csdn.net/android_ls/article/details/39234963" target="_blank" rel="external">http://blog.csdn.net/android_ls/article/details/39234963</a><br>我发现这真是太神奇了！在LaunchImage中加上对应的图片就解决了！！<br>于是乎我就这么解决了这个问题！！！特别记录下！！！！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/" data-id="cimora3is0010ega559ixolyf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/13/公司项目流程/" data-id="cimrlzo61000cbua5l4vyecxm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -459,7 +464,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">20</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">20</span></li></ul>
     </div>
   </div>
 
@@ -471,6 +476,14 @@
       <ul>
         
           <li>
+            <a href="/2016/04/08/github按star排名，作用讲解（十六）-md/">github按star排名，作用讲解（十六）.md</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/07/github按star排名，作用讲解（十五）.md/">/Users/apple/Desktop/workingSpace/blogs/source/_posts/github按star排名，作用讲解（十五）.md </a>
+          </li>
+        
+          <li>
             <a href="/2016/04/06/github按star排名，作用讲解（十四）/">github按star排名，作用讲解（十四）</a>
           </li>
         
@@ -480,14 +493,6 @@
         
           <li>
             <a href="/2016/04/05/github按star排名，作用讲解（十二）/">github按star排名，作用讲解（十二）</a>
-          </li>
-        
-          <li>
-            <a href="/2016/04/05/github按star排名，作用讲解（十一）/">github按star排名，作用讲解（十一）</a>
-          </li>
-        
-          <li>
-            <a href="/2016/04/02/github按star排名，作用讲解（十）/">github按star排名，作用讲解（十）</a>
           </li>
         
       </ul>
