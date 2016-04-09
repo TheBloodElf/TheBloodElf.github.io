@@ -65,6 +65,83 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2-duplicate-symbols-for-architecture-arm64问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/" class="article-date">
+  <time datetime="2015-12-17T10:00:55.000Z" itemprop="datePublished">2015-12-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/">2 duplicate symbols for architecture arm64问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>先看下这个问题的描述：<br><img src="/images/12.png" alt="12.png"><br>我今天开发的时候遇到两次这个问题了，两次的解决方法和出问题的地方都不一样，所以这里写一下原因：<br>一：我第一次遇到这个问题是因为有两个地方同时放入了相同的文件夹，什么意思？加载网络图片自己放入了SDWebImage第三方，然后自己在网上下载了另外一个第三方，这个第三方中也有SDWebImage，所以就出错了；<br>解决方法：你肯定知道了啊！<br>二：第二次遇到这个错误的时候，我真是不知道什么原因，代码都好好的，但是直到我看到了这里：<br><img src="/images/13.png" alt="13.png">还真是大意啊！<br>解决方法：不给你说！</p>
+<p>附加：<br>还有很多问题会出现这样的错误，比如第三方不支持64位等等，所以自己慢慢研究吧～～</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/17/2-duplicate-symbols-for-architecture-arm64问题/" data-id="cimsw5s2r0000v0a5cwlspggb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-公司项目流程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/13/公司项目流程/" class="article-date">
+  <time datetime="2015-12-13T06:41:57.000Z" itemprop="datePublished">2015-12-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/13/公司项目流程/">公司项目流程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这篇文章是写给找工作的人的，因为面试时候会问到这个问题，那么公司的项目流程是什么样的呢？<br>一：先有点子，点子是谁提供的呢？这个得看公司的制度了，是专人或者所有人集合一起。<br>二：有了点子不是就可以开始动手了，得先大概的想一想这个方案能不能做出来？这时候需要技术人员和需求人员等相关人一起讨论。<br>三：如果方案不可行，则另外想或者减少方案中复杂的部分。<br>四：如果方案可行，那么就可以动手了（除了客户端），比如原型设计师做原型，我们公司用的原型设计工具是Briefscase；服务器的人就可以做接口了（需要和客户端的沟通）；如果项目是有其他部分的，比如微信公众号、网页端等等，那么这些人也可以开始动手了，因为这些往往是客户端的一个链接进去或者跳转过去的。<br>五：那么客户端的人做什么呢？他们开始封装一些要用的工具类（二维码等等）和集成一些功能（地图、第三支付等等），然后等到原型出来就可以开始做界面了，然后等服务器做一部分接口就开始对接接口填充数据了。<br>六：做的时候客户端人员需要喝原型设计师沟通，就是给它们开开是不是这个样子？不是就改！如果公司测试模式是“双v”等，则需要边测试边写或者什么的。<br>七：项目出来了，这时候需要一次集中测试，看有问题没有，没有的话就可以上线了！<br>八：上线了，不是就没事情做了，这时候会得到客户的一些反馈（如果我不喜欢自己的照片给别人看），那么相关功能的人员就需要更新功能了（这就是迭代吧）。<br>九：经过一定量的八步骤，可能就需要更新版本了，就是改了再提交审核。</p>
+<p>附加：<br>一：如果你是公司才招进去的，那么你开始的任务是熟悉上一个版本的框架和软件大概（不是让你看懂所有的代码），然后可能需要重新从头写所有的程序（所以没必要把他的思想看很彻底，反正都要自己写），如果不是从头写，那么你就需要好好的看别人的代码了（很痛苦！！！）。<br>二：你一般是有一个直接上级的，那么你的工作要定期给他讲，这样才能让他了解你，这样才能合理利用资源嘛！<br>三：如果你是才进入的，那么核心的代码不会让你写的（除非只有你一个程序员），上级会安排一些简单的任务给你，你得高质量完成！等上级给你权利写核心代码的时候，你就已经很厉害了！那么有人就问了，我写简单的对自己没进步啊。那么你就是真的没有工作经验了（工作的人都知道，除了自己特别懒，总感觉时间不够，ps：我都有好多东西想学呢）。<br>四：代码同步等必备工具，好吧这些你得花两个小时好好看看（只需要两个小时），不要在这上面体现的自己多菜。<br>五：上级安排你的任务，你不会就谷歌（一定是谷歌），不要总问别人，别人其实都会，你这样去公司是学技术去了？（没人希望新员工是这样，除非BAT等，人家有钱，就爱”培养“）<br>六：。。。（好吧写不完）</p>
+<p>好了，这些就是我的初步理解了（因为我才工作一个月，有错误我后面慢慢改）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/13/公司项目流程/" data-id="cimsw5s3x000cv0a5zby3bu34" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-使用ios自带的分享UIActivityViewController" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/12/10/使用ios自带的分享UIActivityViewController/" class="article-date">
@@ -92,7 +169,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/10/使用ios自带的分享UIActivityViewController/" data-id="cimrm2t3j000ed3a5e7xi4lmz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/10/使用ios自带的分享UIActivityViewController/" data-id="cimsw5s40000ev0a5y0i7fdy7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -129,7 +206,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/" data-id="cimrm2t4x0012d3a5p7ascv13" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/10/Xcode7真机-虚拟机运行手机屏幕上下黑边问题/" data-id="cimsw5s5i0014v0a5qr0usm7h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -166,7 +243,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/09/第三天踩点（最后一篇）/" data-id="cimrm2t310004d3a5x1oz2rix" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/09/第三天踩点（最后一篇）/" data-id="cimsw5s3h0004v0a5gdihecor" class="article-share-link">Share</a>
       
       
     </footer>
@@ -207,7 +284,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/自己做微信图片浏览demo/" data-id="cimrm2t2y0002d3a5k9y2ubhq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/自己做微信图片浏览demo/" data-id="cimsw5s3b0002v0a50n0m5tgy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -244,7 +321,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/今天晚上真是天真/" data-id="cimrm2t3n000fd3a5ha3gmsog" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/今天晚上真是天真/" data-id="cimsw5s43000fv0a5t3p5hidi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -281,7 +358,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/新住处第二天踩点总结/" data-id="cimrm2t350006d3a5982lymsp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/新住处第二天踩点总结/" data-id="cimsw5s3k0006v0a5so96nhoh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -326,7 +403,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/07/hello-world/" data-id="cimrm2t3v000jd3a5864kxgjr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/07/hello-world/" data-id="cimsw5s4b000jv0a530k5569n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -363,81 +440,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/07/shareSDK关于ios9适配问题/" data-id="cimrm2t3t000id3a5zddogyrx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-新住处到公司（第一天上班时间总结）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/07/新住处到公司（第一天上班时间总结）/" class="article-date">
-  <time datetime="2015-12-07T01:09:28.000Z" itemprop="datePublished">2015-12-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/07/新住处到公司（第一天上班时间总结）/">新住处到公司（第一天总结）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  因为昨天我搬家到了新住处（成都建发天府鹭洲）,然后今天是星期一上班，所以我得早点起来踩点，不能迟到啊！<br>  同样的，我7点30的闹钟（眠了一会儿～～～）起来。洗脸刷牙然后下楼吃饭，走路到了公交地点准备上车。发现好多人啊。。。本来以为搬了地方就可以更舒适的上班了～<br>  上车了，发现人不多。看了一下到终点的距离，只有6个站，嗨皮啊！但是到第3个站的时候，人多起来了，我又感受到了挤（之前坐地铁我已经受够了）！没关系，没地铁挤，还好。<br>  但是到了第4个站的时候，堵车了（fuc*）！堵了10分钟。<br>  启动了，还有两个站，坚持！<br>  下车了，发现很多人都这里下，发现我们真实苦逼的上班族啊！<br>  到了公司，好吧，公司还没开门，我看了下时间：8:20。还不错，只用了50分钟，加赖床、吃饭和堵车。看来以后我可以睡到8点起来了，开心～～<br>  然后公司终于开门了，时间是8:32。然后我进去按了指纹，打开电脑，看了看路线，怎么是凹型路线呢？于是我重新找了一条路线，发现竟然可以坐＊走直线。。。好吧我明天得继续踩点了。<br>  期待明天的到来！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/07/新住处到公司（第一天上班时间总结）/" data-id="cimrm2t370007d3a5b1o7kkv0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-忙碌的一天终于结束了" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/06/忙碌的一天终于结束了/" class="article-date">
-  <time datetime="2015-12-06T12:36:55.000Z" itemprop="datePublished">2015-12-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/06/忙碌的一天终于结束了/">忙碌的一天终于结束了</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  因为昨天是在朋友家睡的(为了体验一个人睡一间房间的感觉)，在出来培训的一段时间都是和基友一起睡的（是不是很苦逼）。<br>  今天上午9点起来，用手泼水洗洗脸（因为就是去睡一下，不可能还帕子吧）。到基友家收拾东西（花了1个小时）。<br>  叫上自己的小伙伴（另外的一个朋友，我发现我朋友还是挺多的）。让他帮我来搬东西，这个时候已经11点了。<br>  我洗了个澡，大概就11点30了，然后发现我是不是该请他吃饭呢？（好吧，这是肯定的，毕竟我都洗了澡了）<br>  出去吃饭吧，11点50到饭店，吃了饭然后就1点了。<br>  到家，拿上东西，妈蛋，有事情发生（朋友让我等等，让我把家里的东西给他朋友）。<br>  好吧，我等。。。。<br>  这时候2点了，我发现是不是该走了，不等了，妈蛋。电话来了！<br>  我把东西送了回来，发现2点40了。马上拿着东西赶地铁了。<br>  到了，目的地，然后给房东打电话说我来了！是的我来了，都4点了！<br>  把东西安顿好，妈蛋，我朋友说和我一起住，好吧！（其实是又要回去一趟，帮他拿东西）<br>  又回去了，然后拿了东西，都6点了，然后吃了饭再走吧，我实在走不动了，干脆叫个uber吧！来个大众（好生气啊，昨天来的都是本田和雪芙拉啊）.还是得坐啊！<br>  终于到家了，现在是8点了！把房子收拾好，于是就来写一个blog记录下自己今天的旅程！<br>  （其实hexo蛮好用的，我喜欢命令行写……）</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/06/忙碌的一天终于结束了/" data-id="cimrm2t3b0009d3a54wt1on01" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/07/shareSDK关于ios9适配问题/" data-id="cimsw5s49000iv0a55uu247m6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -449,7 +452,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
     </nav>
   
 </section>
@@ -466,7 +469,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">20</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">20</span></li></ul>
     </div>
   </div>
 
@@ -478,6 +481,14 @@
       <ul>
         
           <li>
+            <a href="/2016/04/09/github按star排名，作用讲解（十八）-md/">github按star排名，作用讲解（十八）-md</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/09/github按star排名，作用讲解（十七）-md/">github按star排名，作用讲解（十七）-md</a>
+          </li>
+        
+          <li>
             <a href="/2016/04/08/github按star排名，作用讲解（十六）-md/">github按star排名，作用讲解（十六）.md</a>
           </li>
         
@@ -487,14 +498,6 @@
         
           <li>
             <a href="/2016/04/06/github按star排名，作用讲解（十四）/">github按star排名，作用讲解（十四）</a>
-          </li>
-        
-          <li>
-            <a href="/2016/04/06/github按star排名，作用讲解（十三）/">github按star排名，作用讲解（十三）</a>
-          </li>
-        
-          <li>
-            <a href="/2016/04/05/github按star排名，作用讲解（十二）/">github按star排名，作用讲解（十二）</a>
           </li>
         
       </ul>
